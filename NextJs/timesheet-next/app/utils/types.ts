@@ -29,3 +29,13 @@ export type history = {
     hours: number;
     user: string;
 };
+
+//Session type
+export type session = {
+    id: number;
+    date: string;
+    start: string;
+    end: string;
+    break: number;
+    user: string;
+};
