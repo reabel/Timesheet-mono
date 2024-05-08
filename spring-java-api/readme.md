@@ -9,6 +9,8 @@
 
 - [Folder structures](https://studygyaan.com/spring-boot/spring-boot-project-folder-structure-and-best-practices)
 - [JPA Entities](https://www.baeldung.com/jpa-entities)
+- [Spring Service annotation with example](https://www.geeksforgeeks.org/spring-service-annotation-with-example/)
+- [CORS in SpringMVC](https://docs.spring.io/spring-framework/reference/web/webmvc-cors.html)
 
 ## Upcoming changes
 
