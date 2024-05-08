@@ -11,33 +11,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class UserController {
-    private final UserRepository repository;
-
-    UserController(UserRepository repository) {
-        this.repository = repository;
-    }
+class TSEntryController {
+  private final TSEntryRepository repository;
+  
+  TSEntryController(TSEntryRepository repository) {
+    this.repository = repository;
+  }
 
   // Aggregate root
   // tag::get-aggregate-root[]
-  @GetMapping("/users")
-  List<User> all() {
+  @GetMapping("/entries")
+  List<TSEntry> all() {
     return repository.findAll();
   }
   // end::get-aggregate-root[]
   
-  @PostMapping("/users/{id}")
-  User newUser(@RequestBody User newUser, @PathVariable Long id) {
-    return repository.save(newUser);
+  @PostMapping("/entries/{id}")
+  TSEntry newEntry(@RequestBody TSEntry newEntry, @PathVariable Long id) {
+    return repository.save(newEntry);
   }
 
-  @PutMapping("/users/{id}")
-  User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
-    return repository.save(newUser);
+  @PutMapping("/entries/{id}")
+  TSEntry replaceEntry(@RequestBody TSEntry newEntry, @PathVariable Long id) {
+    return repository.save(newEntry);
   }
 
-  @DeleteMapping("/users/{id}")
-  void deleteUser(@PathVariable Long id) {
+  @DeleteMapping("/entries/{id}")
+  void deleteEntry(@PathVariable Long id) {
     repository.deleteById(id);;
   }
 }

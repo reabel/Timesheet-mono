@@ -1,20 +1,21 @@
 package com.reabel.springjavaapi;
 
+import java.util.Objects;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-class User {
+class TSUser {
     private @Id @GeneratedValue Long id;
     private String username;
     private String password;
     private String email;
     private String role;
 
-    User() {}
+    TSUser() {}
 
-    User(String username, String password, String email, String role) {
+    TSUser(String username, String password, String email, String role) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -76,15 +77,15 @@ class User {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (!(o instanceof User))
+        if (!(o instanceof TSUser))
             return false;
-        User user = (User) o;
-        return java.util.Objects.equals(this.id, user.id) && java.util.Objects.equals(this.username, user.username) && java.util.Objects.equals(this.password, user.password) && java.util.Objects.equals(this.email, user.email) && java.util.Objects.equals(this.role, user.role);
+        TSUser user = (TSUser) o;
+        return Objects.equals(this.id, user.id) && Objects.equals(this.username, user.username) && Objects.equals(this.password, user.password) && Objects.equals(this.email, user.email) && Objects.equals(this.role, user.role);
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(this.id, this.username, this.password, this.email, this.role);
+        return Objects.hash(this.id, this.username, this.password, this.email, this.role);
     }
     
 }

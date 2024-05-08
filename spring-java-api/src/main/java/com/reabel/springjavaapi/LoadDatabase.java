@@ -17,16 +17,16 @@ class LoadDatabase {
   private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
 
   @Bean
-  CommandLineRunner initDatabase(UserRepository userRepository, EntryRepository entryRepository) {
+  CommandLineRunner initDatabase(TSUserRepository userRepository, TSEntryRepository entryRepository) {
 
     return args -> {
-      userRepository.save(new User("bbaggins", "password1", "bbaggins@reabelx.com", "admin"));
-      userRepository.save(new User("fbaggins", "password2", "fbaggins@reabelx.com", "admin"));
+      userRepository.save(new TSUser("bbaggins", "password1", "bbaggins@reabelx.com", "admin"));
+      userRepository.save(new TSUser("fbaggins", "password2", "fbaggins@reabelx.com", "admin"));
 
       userRepository.findAll().forEach(employee -> log.info("Preloaded " + employee));
 
       
-      entryRepository.save(new Entry("Something todo", false, 60, "2021-09-01", "09:00", "10:00", 0, "Project 1"));
+      entryRepository.save(new TSEntry("Something todo", false, 60, "2021-09-01", "09:00", "10:00", 0, "Project 1"));
 
       entryRepository.findAll().forEach(order -> {
         log.info("Preloaded " + order);

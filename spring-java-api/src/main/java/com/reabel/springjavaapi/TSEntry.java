@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-class Entry {
+class TSEntry {
   private @Id @GeneratedValue Long id;
   private String description;
   private Boolean recurring;
@@ -16,9 +16,9 @@ class Entry {
   private Integer breakAmt;
   private String project;
 
-  Entry() {}
+  TSEntry() {}
 
-  Entry(String description, Boolean recurring, Integer allotedTime, String date, String start, String end, Integer breakAmt, String project) {
+  TSEntry(String description, Boolean recurring, Integer allotedTime, String date, String start, String end, Integer breakAmt, String project) {
     this.description = description;
     this.recurring = recurring;
     this.allotedTime = allotedTime;
@@ -105,9 +105,9 @@ class Entry {
   public boolean equals(Object o) {
     if (this == o)
       return true;
-    if (!(o instanceof Entry))
+    if (!(o instanceof TSEntry))
       return false;
-    Entry entry = (Entry) o;
+    TSEntry entry = (TSEntry) o;
     return java.util.Objects.equals(this.id, entry.id) && java.util.Objects.equals(this.description, entry.description) && java.util.Objects.equals(this.recurring, entry.recurring) && java.util.Objects.equals(this.allotedTime, entry.allotedTime) && java.util.Objects.equals(this.date, entry.date) && java.util.Objects.equals(this.start, entry.start) && java.util.Objects.equals(this.end, entry.end) && java.util.Objects.equals(this.breakAmt, entry.breakAmt) && java.util.Objects.equals(this.project, entry.project);
   }
   
