@@ -1,4 +1,4 @@
-package com.reabel.springjavaapi;
+package com.reabel.springjavaapi.TSUser;
 
 class TSUserNotFoundException extends RuntimeException {
 

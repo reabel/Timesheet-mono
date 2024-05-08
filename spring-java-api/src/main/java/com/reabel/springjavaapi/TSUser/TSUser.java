@@ -1,4 +1,4 @@
-package com.reabel.springjavaapi;
+package com.reabel.springjavaapi.TSUser;
 
 import java.util.Objects;
 import jakarta.persistence.Entity;
@@ -6,7 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-class TSUser {
+public class TSUser {
     private @Id @GeneratedValue Long id;
     private String username;
     private String password;
@@ -15,7 +15,7 @@ class TSUser {
 
     TSUser() {}
 
-    TSUser(String username, String password, String email, String role) {
+    public TSUser(String username, String password, String email, String role) {
         this.username = username;
         this.password = password;
         this.email = email;

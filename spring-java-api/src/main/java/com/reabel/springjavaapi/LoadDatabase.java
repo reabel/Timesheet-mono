@@ -6,6 +6,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.reabel.springjavaapi.TSEntry.TSEntry;
+import com.reabel.springjavaapi.TSEntry.TSEntryRepository;
+import com.reabel.springjavaapi.TSUser.TSUser;
+import com.reabel.springjavaapi.TSUser.TSUserRepository;
+
 /**
  * LoadDatabase
  * We want to intialize the database with some data. We can do this by implementing the CommandLineRunner interface.

@@ -1,4 +1,4 @@
-package com.reabel.springjavaapi;
+package com.reabel.springjavaapi.TSEntry;
 
 import java.util.Objects;
 import jakarta.persistence.Entity;
@@ -6,7 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-class TSEntry {
+public class TSEntry {
   private @Id @GeneratedValue Long id;
   private String description;
   private Boolean recurring;
@@ -19,7 +19,7 @@ class TSEntry {
 
   TSEntry() {}
 
-  TSEntry(String description, Boolean recurring, Integer allotedTime, String date, String start, String tsend, Integer breakAmt, String project) {
+  public TSEntry(String description, Boolean recurring, Integer allotedTime, String date, String start, String tsend, Integer breakAmt, String project) {
     this.description = description;
     this.recurring = recurring;
     this.allotedTime = allotedTime;

@@ -1,4 +1,4 @@
-package com.reabel.springjavaapi;
+package com.reabel.springjavaapi.TSEntry;
 
 import java.util.List;
 
@@ -11,33 +11,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class TSUserController {
-    private final TSUserRepository repository;
-
-    TSUserController(TSUserRepository repository) {
-        this.repository = repository;
-    }
+class TSEntryController {
+  private final TSEntryRepository repository;
+  
+  TSEntryController(TSEntryRepository repository) {
+    this.repository = repository;
+  }
 
   // Aggregate root
   // tag::get-aggregate-root[]
-  @GetMapping("/users")
-  List<TSUser> all() {
+  @GetMapping("/entries")
+  List<TSEntry> all() {
     return repository.findAll();
   }
   // end::get-aggregate-root[]
   
-  @PostMapping("/users/{id}")
-  TSUser newUser(@RequestBody TSUser newUser, @PathVariable Long id) {
-    return repository.save(newUser);
+  @PostMapping("/entries")
+  TSEntry newEntry(@RequestBody TSEntry newEntry) {
+    return repository.save(newEntry);
   }
 
-  @PutMapping("/users/{id}")
-  TSUser replaceUser(@RequestBody TSUser newUser, @PathVariable Long id) {
-    return repository.save(newUser);
+  @PutMapping("/entries/{id}")
+  TSEntry replaceEntry(@RequestBody TSEntry newEntry, @PathVariable Long id) {
+    return repository.save(newEntry);
   }
 
-  @DeleteMapping("/users/{id}")
-  void deleteUser(@PathVariable Long id) {
+  @DeleteMapping("/entries/{id}")
+  void deleteEntry(@PathVariable Long id) {
     repository.deleteById(id);;
   }
 }

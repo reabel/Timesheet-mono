@@ -1,4 +1,4 @@
-package com.reabel.springjavaapi;
+package com.reabel.springjavaapi.TSEntry;
 
 class TSEntryNotFoundException extends RuntimeException {
 
