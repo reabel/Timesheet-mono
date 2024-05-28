@@ -1,7 +1,11 @@
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 import { entry } from "../utils/types";
 
-const TSTable = ({rows = [] }) => {
+interface TableProps {
+    rows: Array<entry>;
+};
+
+const TSTable = ({rows = [] }: TableProps) => {
     return (
         <div className="relative overflow-x-auto">
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -9,8 +13,9 @@ const TSTable = ({rows = [] }) => {
                     <tr>
                     <th scope="col" className="px-6 py-3">Select</th>
                     <th scope="col" className="px-6 py-3">Description</th>
+                    <th scope="col" className="px-6 py-3">Status</th>
                     <th scope="col" className="px-6 py-3">Recurring?</th>
-                    <th scope="col" className="px-6 py-3">Alloted Time</th>
+                    <th scope="col" className="px-6 py-3">Budget</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,8 +26,9 @@ const TSTable = ({rows = [] }) => {
                                 <input type="checkbox"></input>
                             </th>
                             <td className="px-6 py-4">{row.description}</td>
-                            <td className="px-6 py-4">{row.recurring}</td>
-                            <td className="px-6 py-4">{row.allotedTime}</td>
+                            <td className="px-6 py-4">{row.status || "N/A"}</td>
+                            <td className="px-6 py-4">{row.recurring ? "Yes": "No"}</td>
+                            <td className="px-6 py-4">{row.spentTime} / {row.allottedTime} Days</td>
                             </tr>
                         );
                     })}
