@@ -1,9 +1,24 @@
 //type cannot be extended whereas interface can be.
+
+export enum status {
+    PENDING = "Pending",
+    STARTED = "Started",
+    FINISHED = "Finished"
+}
+
+export enum connectionStatus {
+    CONNECTED = "Connected",
+    DISCONNECTED = "Disconnected",
+    PENDING = "Pending"
+}
+
 export type entry = {
     id: number;
     description?: string,
     recurring?: boolean,
-    allotedTime?: number,
+    allottedTime?: number,
+    spentTime?: number,
+    status?: status, 
     date?: string;
     start?: string;
     end?: string;
