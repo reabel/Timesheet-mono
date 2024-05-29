@@ -6,11 +6,14 @@ interface TACProps {
 
 const TSAPIConnection = ({connstatus = connectionStatus.DISCONNECTED }: TACProps) => {
     let colour;
+    console.log(connstatus)
     switch (connstatus) {
         case connectionStatus.CONNECTED:
             colour = "bg-green-500";
+            break;
         case connectionStatus.PENDING:
             colour = "bg-yellow-500";
+            break;
         default:
             colour = "bg-red-500";
         

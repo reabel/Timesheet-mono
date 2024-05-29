@@ -13,7 +13,7 @@ export enum connectionStatus {
 }
 
 export type entry = {
-    id: number;
+    id: number; //Auto-incremented
     description?: string,
     recurring?: boolean,
     allottedTime?: number,
