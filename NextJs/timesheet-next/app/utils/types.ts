@@ -30,9 +30,16 @@ export type entry = {
 export type user = {
     id: number;
     username: string;
-    password: string;
+    password?: string;
     email: string;
     role: string;
+};
+
+export type project = {
+    id: number;
+    name: string;
+    description: string;
+    users: Array<user>;
 };
 
 // History type

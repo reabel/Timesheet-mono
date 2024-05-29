@@ -1,4 +1,3 @@
-import { PropsWithChildren, ReactNode } from "react";
 import { entry } from "../utils/types";
 
 interface TableProps {

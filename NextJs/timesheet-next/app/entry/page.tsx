@@ -5,9 +5,9 @@ interface entryProps {
 //TODO: add submit using createEntry
 export default function entry({ createEntry }: entryProps) {
     return (
-      <main className="flex flex-col items-center justify-between p-24">
+      <main className="flex flex-col items-center justify-between">
           <h1 className="text-xl font-bold">Entry Form</h1>
-          <div className="w-full max-w-xs">
+          <div className="w-full max-w-prose">
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
               <div className="mb-4">
                 <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">Description:</label>
