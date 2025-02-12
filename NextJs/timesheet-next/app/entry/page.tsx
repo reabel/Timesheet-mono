@@ -1,9 +1,9 @@
-interface entryProps {
-  createEntry: Function
-}
+// interface entryProps {
+//   createEntry: Function
+// }
 
 //TODO: add submit using createEntry
-export default function entry({ createEntry }: entryProps) {
+export default function entry({ createEntry }: any) {
     return (
       <main className="flex flex-col items-center justify-between">
           <h1 className="text-xl font-bold">Entry Form</h1>

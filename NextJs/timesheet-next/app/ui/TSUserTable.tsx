@@ -18,9 +18,9 @@ const TSUserTable = ({rows = [] }: TableProps) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {rows.map((row: user) => {
+                    {rows.map((row: user, index: number) => {
                         return (
-                            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <td className="px-6 py-4">{row.username}</td>
                             <td className="px-6 py-4">{row.email}</td>
                             <td className="px-6 py-4">{row.role}</td>
