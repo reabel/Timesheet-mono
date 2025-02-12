@@ -16,9 +16,9 @@ const TSProjectTable = ({rows = [] }: TableProps) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {rows.map((row: project) => {
+                    {rows.map((row: project, index: number) => {
                         return (
-                            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <td className="px-6 py-4">{row.name}</td>
                             <td className="px-6 py-4">{row.description}</td>
                             <td className="px-6 py-4">{row.users.map(user => user.username).join(', ')}</td>
