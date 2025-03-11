@@ -17,3 +17,12 @@
 - Add Basic REST Testing with CRUD.
 - Add validation on required fields.
 - More TBD.
+
+
+## Additional tips
+
+### SDKMAN
+
+- [SDKMAN, a means of switching java versions in a single env](https://sdkman.io/install)
+
+
